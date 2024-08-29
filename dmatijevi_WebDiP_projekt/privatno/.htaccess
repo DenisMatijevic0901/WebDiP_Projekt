@@ -1,0 +1,6 @@
+#BEGIN User Auth
+AuthUserFile /var/www/WebDiP/2021_projekti/WebDiP2021x071/privatno/.htpasswd
+AuthName 'Korisnici'
+AuthType Basic
+Require valid-user
+#END User Auth

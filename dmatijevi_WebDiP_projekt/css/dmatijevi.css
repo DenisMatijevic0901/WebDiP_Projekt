@@ -1,0 +1,486 @@
+body{
+    color: black;
+    font-size: 18px;
+    font-family: 'Cabin', Sans-serif;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%), url("../materijali/pozadina.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/*PODNOŽJE---------------------------------------------------------------------*/
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    color: black;
+    font-family: cursive;
+    bottom: 0px;
+    width: 100%;
+    height:auto;
+    margin-top: 50px;
+}
+
+.logo{
+    margin-top: 15px;
+    margin-left: 1650px;
+    background-color: transparent;
+    position:absolute;
+    top:0px;
+}
+
+/*IZBORNIK---------------------------------------------------------------------*/
+#toggle {
+  display: none;
+}
+
+.hamburger {
+  position: absolute;
+  top: 5em;
+  right: 95%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: black;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav {
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  top: -100%; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+
+/**
+Text
+**/
+nav a { 
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 0.35em;
+  margin-left: -140px;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 0.2px;
+  word-break: break-all;
+}
+nav a:before {
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 0.25em;
+  background-color: #be202f;
+  left: -0.5em;
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+  color: rgb(40,40,40);
+  text-decoration: underline;
+  font-size: 21px;
+  font-weight: bolder;
+}
+nav a:hover:before {
+  height: 100%;
+}
+
+::marker{
+    color:transparent;
+}
+
+/**
+Animations
+**/
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+/*AUTOR PODACI----------------------------------------------------------------*/
+.autor{
+    border: 4px solid;
+    border-color: #272262;;
+    color: black;
+    padding: 8px;
+    background-color: ghostwhite;
+    position: relative;
+    margin:auto;
+    display: table;
+    border-radius: 15px;
+}
+.autor li{
+    padding:20px;
+    border: 1px solid; 
+    border-width: 2px; 
+    border-radius: 40px; 
+    border-color: #272262;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.autor > ul > li:hover{
+    color: red;
+    border-color: ghostwhite;
+    font-size: 24px;
+}
+/*FORMA------------------------------------------------------------------------*/
+.form{
+    margin-top: 50px;
+    background-color: ghostwhite;
+    padding: 20px;
+    margin: auto;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: 4px solid;
+    border-color: #272262;
+    width: 35%;
+    border-radius: 15px;
+}
+
+.form > input{
+    height: 25px;
+    width: 300px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: darkgrey;
+    border-width: thin;
+}
+/*GUMB-------------------------------------------------------------------------*/
+.submit{
+    height:35px;
+    width:155px;
+    margin:auto;
+    margin-bottom: 20px;
+    background-color: ghostwhite;
+    border-color: #272262;
+    font-weight: bold;
+    font-size: 14pt;
+    border-radius: 15px;
+}
+
+.submit:hover{
+    background-color: rgba(39,34,98, 0.9);
+    color: white;
+    border-color: white;
+}
+
+/*-----------------------------------------------------------------------------*/
+.tbKorimePrijava{
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.tbLozinkaPrijava{
+    margin-bottom: 5px;
+    margin-left: 79px;
+}
+
+.selectGalerija{
+    margin-left: 33px;
+}
+
+.crvenaBoja{
+    background-color:lightcoral;
+}
+
+.btnZaboravljenaLozinka{
+    height:35px;
+    margin:auto;
+    margin-left: 145px;
+    background-color: ghostwhite;
+    border-color: #b0835b;
+    border-radius: 15px;
+}
+
+/*TABLICA----------------------------------------------------------------------*/
+th{
+    color:black;
+}
+table, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    text-align: center;
+    color: white;
+}
+
+table {
+    background-color: rgba(39,34,98, 0.9);
+    margin-bottom: 25px;
+    margin-top: 20px;
+    width: -webkit-fill-available;
+}
+
+th, td {
+    padding: 10px;
+    width: 300px;
+}
+caption{
+    margin-bottom: 8px;
+    font-weight: bolder;
+    font-size: 24px;
+    text-decoration: underline;
+    color: black;
+}
+
+td:hover{
+    color: white; 
+}
+tr:hover{
+    background-color: rgba(191,30,45,255);
+    color:black;
+}
+th{
+    background-color:white;
+}
+
+
+.blokiranikorisnici{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.blokiranikorisnici:hover{
+    background-color:white;
+}
+
+.naslovStranice{
+    color: black;
+    text-align:center;
+    margin-bottom: 10px;
+    font-size: 100px;
+    font-family: cursive;
+    width:100%;
+    background: linear-gradient(to bottom , #bf1e2d 20% , #272262 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dokumentacija{
+    border-style: solid;
+    border-color: #272262;
+    color: black;
+    padding: 8px;
+    background-color: ghostwhite;
+    position: relative;
+    margin:auto;
+    display: table;
+    border-radius: 15px;
+}
+
+.dokumentacija > ul > li:hover{
+    color: black;
+    font-weight: bolder;
+}
+
+.drzavaAzuriraj{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.drzavaAzuriraj:hover{
+    background-color:white;
+}
+
+.dodjelaModeratora{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.dodjelaModeratora:hover{
+    background-color:white;
+}
+
+.utrkaAzuriraj{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.utrkaAzuriraj:hover{
+    background-color:white;
+}
+
+.galerijaHover:hover{
+    box-shadow: 0 0 4px 2px rgba(230,131,100, 0.5);
+}
+
+.popisBuducihUtrkaAzurirajVrijeme{
+    padding: 15px 32px;
+    margin-left: 50px;
+    text-decoration:none;
+    width: 100px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.popisBuducihUtrkaAzurirajVrijeme:hover{
+    background-color:white;
+}
+
+.etapaOdustani{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.etapaOdustani:hover{
+    background-color:white;
+}
+
+.prijavaUtrkeAzuriraj{
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.prijavaUtrkeAzuriraj:hover{
+    background-color:white;
+}
+
+.etapaAzuriraj{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.etapaAzuriraj:hover{
+    background-color:white;
+}
+
+.etapaZakljucaj{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.etapaZakljucaj:hover{
+    background-color:white;
+}
+
+.utrkaZakljucaj{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.utrkaZakljucaj:hover{
+    background-color:white;
+}
+
+.proglasiPobjednika{
+    padding-left:5px;
+    padding-right:5px;
+    text-decoration:none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:lightgray;
+}
+
+.proglasiPobjednika:hover{
+    background-color:white;
+}
+
+.pocetnaParagraf{
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+}
+
+.pocetnaParagraf:hover{
+    font-size: 24px;
+}
+
+form > input:focus{
+    background-color: #97DBFA;
+}

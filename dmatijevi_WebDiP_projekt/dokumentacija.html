@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Dokumentacija - Trčanje</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Denis Matijević">
+        <meta name="description" content="24.8.2022.">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <link href="css/dmatijevi.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+           
+            <a href="index.php">
+                <img class="logo" src="materijali/logo.png" alt="Logo trčanje" width="140" height="120">
+            </a>
+
+            <h1 class="naslovStranice">DOKUMENTACIJA</h1>
+
+        </header>         
+        <hr>
+        <section>
+            <div class="dokumentacija">
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Opis projektnog zadatka</h3>
+                <p style="margin-left: 45px; margin-bottom: 45px; width:950px; line-height: 1.5; text-align: justify;">
+                    Za potrebe projekta Web dizajn i programiranje trebalo je izraditi web stranicu. 
+                    Tema projektnog zadatka je "Trčanje". Cjelokupni smisao ovog projekta je da stranica korisnicima omogući prijavu na utrke te da mogu pratiti rezultate. 
+                    Postoje 4 vrste korisnika: neregistrirani, registrirani, moderator i administrator. Na stranicu se je moguće prijaviti i odjaviti s kreiranim računom. 
+                    Različite uloge sadržavaju različite opcije kojima se može pristupiti i upravljati. Administrator kreira države i dodjeljuje im moderatora te kreira utrke
+                    trčanja. Moderator kreira etape te vidi svoje etape i može zaključati utrke. Također, vidi bodovno stanje natjecatelja te proglašava pobjednika. Isto tako,
+                    vidi popis prijavljenih korisnika te evidentira vremena korisnika i zaključava etape. Registrirani korisnik kreira prijavu za utrku te vidi popis budućih utrka i vidi 
+                    popis prijavljenih etapa sa svojim rezultatom. Neregistrirani korisnici imaju nekoliko opcija, a to su: pregled korisnika prema broju završenih etapa te pregled galerije pobjednika utrke.</p>
+
+
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Opis projektnog rješenja</h3>
+                <p style="margin-left: 45px; margin-bottom: 45px; width:950px; line-height: 1.5; text-align: justify;">
+                    Prvim dolaskom na početnu stranicu, korisnik se smatra kao neregistrirani korisnik te ima opcije prijave i registracije. 
+                    Isto tako ima opcije pregleda popisa korisnika prema broju završenih etapa u određenom vremenskom razdoblju (rang lista) te može vidjeti galeriju slika korisnika pobjednika 
+                    uz mogućnost sortiranja po prezimenu ili imenu te mogućnost filtriranja po državi u kojoj se odvijala utrka. Korisnik se u svakom trenutku može odjaviti sa stranice ukoliko je bio prijavljen.
+                    Registrirani korisnik ima mogućnost kreiranja prijava za utrke. Također, može vidjeti popis svih budućih utrka za koje su otvorene prijave te vidi popis etapa za utrke na koje se 
+                    prijavio s rezultatom. Ima mogućnost odustajanja od pojedine etape određene utrke. Moderator kreira etape za utrke u državama za koje je zadužen. Vidi popis svih utrka u državama 
+                    za koje je zadužen i može zaključati utrku ako su sve etape te utrke zaključane. Vidi bodovno stanje po etapama i može proglasiti pobjednika. Također, evidentira vremena korisnika i zaključava 
+                    etapu ako svi korisnici imaju evidentiran rezultat. Administrator ima najveće ovlasti, što znači da kreira države i dodjeljuje im moderatora te kreira utrke trčanja.</p>
+
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">ERA model</h3>
+                <figure style="margin-bottom: 45px;">
+                    <img src="materijali/era_trcanje.png" alt="era model" style="width:950px; height: 1200px; border-style: solid; border-radius: 5px; border-width: 0.5px; border-color: #272262; padding:5px;">
+                    <figcaption style="text-align: left; font-weight: bolder;"></figcaption>
+                </figure> 
+
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Navigacijski dijagram</h3>
+                <figure style="margin-bottom: 45px;">
+                    <img src="materijali/navigacijski_trcanje.png" alt="navigacijski dijagram" style="width:950px; height: 1200px; border-style: solid; border-radius: 5px; border-width: 0.5px; border-color: #272262; padding:5px;">
+                    <figcaption style="text-align: left; font-weight: bolder;"></figcaption>
+                </figure> 
+
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Popis i opis skripata, mapa mjesta</h3>
+                <ul style="margin-left: 45px; margin-bottom: 45px; width:950px; line-height: 1.5; text-align: justify;">
+                    <b><i><li>mapa css</li></i></b>
+                    <ul>
+                        <li>dmatijevi.css - skripta stilskog jezika koja služi za dizajn web stranice</li>
+                    </ul>
+                    <hr>
+                    <b><i><li>mapa javascript</li></i></b>   
+                    <ul>
+                        <li>dmatijevi.js - skripta javascript jezika u kojoj su rađene validacije na klijentu </li>
+                    </ul>
+                    <hr>
+                    <b><i><li>mapa izvorne_datoteke - sadrži sve izvorne datoteke vezane za projekt (.sql, .mwb i .xml datoteke)</li></i></b><hr> 
+                    <b><i><li>mapa materijali - sadrži sve datoteke slikovnog formata (.jpg i .png datoteke)</li></i></b><hr>   
+                    <b><i><li>mapa privatno</li></i></b>    
+                    <ul>
+                        <li>.htaccess - datoteka u kojoj se nalazi korisnik s korisničkim imenom i lozinkom kao i pristup do baze podataka</li>
+                        <li>.htpasswd - datoteka u kojoj se nalazi generirana lozinka  </li>
+                        <li>lista_korisnika.php - php skripta na kojoj se nalazi popis svih korisnika u bazi</li>
+                    </ul>
+                    <hr>
+                    <b> <i><li>mapa obrasci</li></i></b>    
+                    <ul>
+                        <li>prijava.php - stranica na kojoj se korisnik prijavljuje</li>
+                        <li>registracija.php - stranica na kojoj se korisnik registrira</li>
+                    </ul>              
+                    <hr>
+                    <li>baza.class.php - skripta koja služi za povezivanje na bazu i izvođenje upita</li>
+                    <li>sesija.class.php - skripta koja služi za kreiranje sesije u koju se sprema korisničko ime korisnika te njegova uloga</li>
+                    <li>aktivacija.php - stranica na kojoj korisnik nakon što se registrirao ima mogućnost aktivacije korisničkog računa</li>                  
+                    <li>galerija.php - stranica na kojoj korisnik može vidjeti galeriju pobjednika utrka, ima mogućnost sortiranja i filtriranja</li>                  
+                    <li>izbornik.php - skripta na kojoj se nalaze elementi izbornika</li>                        
+                    <li>pregled_blokiranih_korisnika.php - stranica na kojoj administrator vidi popis blokiranih korisnika, s mogućnošću blokiranja/odblokiranja korisnika</li>
+                    <li>rang_lista.php - stranica na kojoj korisnik vidi rang listu korisnika prema broju završenih etapa u vremenskom razdoblju</li>            
+                    <li>drzave.php - skripta na kojoj administrator kreira/ažurira/pregledava države</li>
+                    <li>dodjela_moderatora.php - skripta koja služi kako bi se određenoj državi dodijelio moderator</li>
+                    <li>etape.php - skripta na kojoj moderator kreira/ažurira/pregledava etape</li>
+                    <li>evidentiranje_vremena.php - skripta na kojoj moderator evidentira vremena korisnika i zaključava etapu</li>
+                    <li>popis_buducih_utrka.php - skripta na kojoj se može vidjeti popis svih budućih utrka za koje su otvorene prijave</li>
+                    <li>popis_etapa_prijavljenih_utrka.php - skripta na kojoj se može vidjeti popis korisnikovih prijavljenih utrka s rezultatom te mogućnošću odustanka od etape</li>
+                    <li>popis_prijavljenih_korisnika.php - skripta na kojoj moderator vidi popis svih prijavljenih korisnika za one etape za koje je zadužen s informacijom je li korisnik završio ili je odustao od etape</li>
+                    <li>popis_utrka_i_zakljucavanje.php - skripta na kojoj moderator vidi svoje utrke, bodovno stanje korisnika, može zaključati utrke i proglasiti pobjednika.</li>
+                    <li>prijava_utrke.php - skripta na kojoj registrirani korisnik kreira/ažurira/pregledava prijavu za utrku</li>
+                    <li>utrke.php - skripta na kojoj administrator kreira/ažurira/pregledava utrke trčanja</li>             
+                    <li>zaglavlje.php - skripta na kojoj se uključuje klasa baze i klasa sesije, koristi se u svim stranicama</li>        
+                    <li>o_autoru.html - stranica na kojoj se nalaze informacije o autoru</li>
+                    <li>dokumentacija.html - stranica dokumentacije</li>
+                    <li>index.php - početna stranica</li>
+                </ul>
+
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Popis i opis korištenih tehnologija i alata</h3>
+                <ul style="margin-left: 45px; margin-bottom: 45px; width:950px; line-height: 1.5; text-align: justify;">
+                    <li>Javascript - validacija na strani klijenta</li>
+                    <li>PHP - rad s bazom i provjera zahtjeva GET i POST metodama</li>
+                    <li>NetBeans IDE - alat u kojem je izrađen projekt</li>
+                    <li>Filezilla - alat za prijenos datoteka na server</li>
+                    <li>MySQL Workbench - alat u kojem je modelirana baza podataka (ERA model)</li>
+                    <li>draw.io - online alat u kojem je izrađen navigacijski dijagram</li>
+                    <li>phpMyAdmin - unos podataka u tablice i izrađivanje SQL upita</li>
+                    <li>Terminal - web server pomoću kojeg je testirano programsko rješnje</li>              
+                </ul>
+                <h3 style="margin-left: 25px; background-color: lightcoral; border-radius: 5px;">Popis i opis vanjskih biblioteka</h3>
+                <ul style="margin-left: 45px; margin-bottom: 45px; width:950px; line-height: 1.5; text-align: justify;">
+                    <li>Google reCAPTCHA - zaštita od automata</li>
+                    <li>zaglavlje.php, izbornik.php, baza.class.php, sesija.class.php - materijali s vježbi</li>
+                    <li>aktivacija.php, prijava.php, registracija.php, dmatijevi.js - preuzeto s prošlog projekta "Pivnica"</li>
+                    <li>gumb za izbornik - preuzeto s <a href="https://alvarotrigo.com/blog/hamburger-menu-css/">https://alvarotrigo.com/blog/hamburger-menu-css/</a> (rb.4)</li>  
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <address>Kontakt: 
+                <a href="mailto:dmatijevi@foi.hr" style="color:black; text-decoration: none;">
+                    Denis Matijević</a></address>
+            <p>&copy; 2022 D. Matijević</p>
+            <img style="position:relative; top:-7px;" src="materijali/HTML5.png" alt="HTML" height="62" width="62">
+            <img style="position:relative; top:0px;" src="materijali/CSS3.png" alt="CSS3" height="75" width="75">
+        </footer>
+    </body>
+</html>
